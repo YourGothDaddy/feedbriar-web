@@ -20,11 +20,17 @@ function App() {
   if (!champion) return <div>Loading...</div>;
 
   return (
-    <div>
+    <div style={{ padding: "32px" }}>
       <h1>{champion.name}</h1>
-      <h2>{champion.title}</h2>
-      <img src={champion.iconUrl} alt={champion.name} />
-      <p>{champion.lore}</p>
+      <div className="retro-panel">
+        <h2>{champion.title}</h2>
+        <img
+          src={champion.iconUrl}
+          alt={champion.name}
+          style={{ border: "2px solid var(--color-hunger)" }}
+        />
+        <p>{champion.lore}</p>
+      </div>
     </div>
   );
 }
